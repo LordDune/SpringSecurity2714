@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>public data</title>
+</head>
+<body>
+<H1>public data: Hello!</H1>
+<form action="/private-data" method="get">
+  <input type="submit" value="Приватная страница"/>
+</form>
+
+<form th:action="@{/logout}" method="post">
+  <input type="submit" value="Log out"/>
+</form>
+</body>
+</html>

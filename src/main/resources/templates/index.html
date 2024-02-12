@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login</title>
+</head>
+<body>
+<div th:if="${param.error}">
+    <a style="color:red">Неверный логин или пароль</a>
+</div>
+<div th:if="${param.error_resources}">
+    <a style="color:red">Ошибка. Для доступа к ресурсу необходимо авторизоваться в качестве Админа</a>
+</div>
+<form th:action="@{/}" method="post">
+    <div><label> User Name : <input type="text" name="username"/> </label></div>
+    <div><label> Password: <input type="password" name="password"/> </label></div>
+    <div><input type="submit" value="Enter"/></div>
+</form>
+</body>
+</html>
